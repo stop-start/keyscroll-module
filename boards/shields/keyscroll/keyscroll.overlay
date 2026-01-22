@@ -28,11 +28,12 @@
 
     // Rotary Encoder (EC11 on top)
     encoder0: encoder_0 {
-        compatible = "zmk,encoder";
+        compatible = "alps, ec11";
         label = "Scroll Encoder";
-        a-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;   // Encoder pin A
-        b-gpios = <&gpio0 29 GPIO_ACTIVE_HIGH>;   // Encoder pin B
-        resolution = <4>;                            // Typical for full-step EC11; try 2 or 1 if too sensitive/fast
+        a-gpios = <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Encoder pin A
+        b-gpios = <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Encoder pin B
+	steps = <50>;
+	status = "okay";
         wakeup-source;
     };
 };
