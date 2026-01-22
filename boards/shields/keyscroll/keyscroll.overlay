@@ -33,4 +33,9 @@
 	steps = <18>;
 	status = "okay";
     };
+    sensors: sensors {
+	compatible = "zmk,keymap-sensors";
+	sensors = <&encoder_0>;
+	triggers-per-rotation = <20>;
+    };
 };
