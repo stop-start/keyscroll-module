@@ -9,9 +9,8 @@
             bindings = <
                 &kp A      // Button 1 → types 'A' (test)
                 &kp B      // Button 2 → types 'B'
-                &inc_volume  // Encoder CW → volume up
-                &dec_volume  // Encoder CCW → volume down
             >;
+	    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
