@@ -28,9 +28,9 @@
     // Rotary Encoder (EC11 on top)
     encoder0: encoder_0 {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Encoder pin A
+        a-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Encoder pin A
         b-gpios = <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Encoder pin B
-	steps = <18>;
+	steps = <80>;
 	status = "okay";
     };
     sensors: sensors {
