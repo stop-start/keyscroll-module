@@ -10,7 +10,7 @@
                 &kp A      // Button 1 → types 'A' (test)
                 &kp B      // Button 2 → types 'B'
             >;
-	    sensor-bindings = < &inc_dec_kp UP_ARROW DOWN_ARROW >;
+	    sensor-bindings = < &inc_dec_kp LEFT_ARROW RIGHT_ARROW >;
         };
     };
 };
