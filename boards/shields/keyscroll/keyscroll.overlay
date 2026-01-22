@@ -21,7 +21,7 @@
 
         input-gpios
             = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Button 1  (change to your pin, e.g. &pro_micro 6)
-            , <&gpio1 06 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Button 2
+            , <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Button 2
             ;
     };
 
@@ -29,7 +29,7 @@
     encoder0: encoder_0 {
         compatible = "alps,ec11";
         a-gpios = <&gpio1 15 (GPIO_ACTIVE_LOW)>;   // Encoder pin A
-        b-gpios = <&gpio0 09 (GPIO_ACTIVE_LOW)>;   // Encoder pin B
+        b-gpios = <&gpio0 9 (GPIO_ACTIVE_LOW)>;   // Encoder pin B
 	steps = <18>;
 	status = "okay";
     };
