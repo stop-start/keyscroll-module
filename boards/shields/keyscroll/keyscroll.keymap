@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
     keymap {
@@ -7,10 +8,12 @@
 
         default_layer {
             bindings = <
-                &kp A      // Button 1 → types 'A' (test)
-                &kp B      // Button 2 → types 'B'
+                &kp LC(Z)      // Button 1 → types 'A' (test)
+                &kp G      // Button 2 → types 'B'
+		&bt BT_SEL 0
+		&bt BT_CLR
             >;
-	    sensor-bindings = < &inc_dec_kp C_VOL_UP C_VOL_DN>;
+	    sensor-bindings = < &inc_dec_kp KP_EQUAL KP_MINUS>;
         };
     };
 };
