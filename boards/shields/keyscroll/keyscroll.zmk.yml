@@ -1,0 +1,7 @@
+file_format: "1"
+id: keyscroll
+name: Keyscroll
+type: shield
+url: https://github.com/stop-start/keyscroll-zmk  # or your project link
+requires: [nice_nano_v2]  # or nice_nano
+features: [keys, rotary-encoder, ble]

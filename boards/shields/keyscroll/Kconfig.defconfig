@@ -1,0 +1,4 @@
+if SHIELD_KEYSCROLL
+config ZMK_KEYBOARD_NAME
+    default "Keyscroll"
+endif

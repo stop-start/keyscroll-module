@@ -1,0 +1,17 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp A      // Button 1 → types 'A' (test)
+                &kp B      // Button 2 → types 'B'
+                &inc_volume  // Encoder CW → volume up
+                &dec_volume  // Encoder CCW → volume down
+            >;
+        };
+    };
+};
