@@ -20,17 +20,17 @@
         compatible = "zmk,kscan-gpio-direct";
 
         input-gpios
-            = <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Button 1 
-            , <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Button 2
-            , <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Button 2
-            , <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Button 2
+            = <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Undo 
+            , <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // Grid
+            , <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // BT Clear
+	    , <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  // RGB power button switch
             ;
     };
 
     // Rotary Encoder (EC11 on top)
     encoder0: encoder_0 {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Encoder pin A
+        a-gpios = <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Encoder pin A
         b-gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   // Encoder pin B
 	steps = <80>;
 	status = "okay";
@@ -39,5 +39,21 @@
 	compatible = "zmk,keymap-sensors";
 	sensors = <&encoder0>;
 	triggers-per-rotation = <20>;
+    };
+
+    led_red: led_red {
+        compatible = "gpio-leds";
+        gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>;
+        label = "Power Red";
+    };
+
+    led_green: led_green {
+	gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>;
+        label = "Power Green";
+    };
+
+    led_blue: led_blue {
+	gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
+	label = "Power Blue";
     };
 };
